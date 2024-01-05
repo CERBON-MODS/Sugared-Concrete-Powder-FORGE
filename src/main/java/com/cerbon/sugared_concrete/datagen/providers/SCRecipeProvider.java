@@ -22,22 +22,7 @@ public class SCRecipeProvider extends RecipeProvider implements IConditionBuilde
 
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> writer) {
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_WHITE_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_ORANGE_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_MAGENTA_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_LIGHT_BLUE_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_YELLOW_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_LIME_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_PINK_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_GRAY_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_LIGHT_GRAY_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_CYAN_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_PURPLE_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_BLUE_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_BROWN_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_GREEN_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_RED_CONCRETE_POWDER.get());
-        sugaredConcretePowder(writer, SCBlocks.SUGARED_BLACK_CONCRETE_POWDER.get());
+        SCBlocks.BLOCKS.getEntries().forEach(block -> sugaredConcretePowder(writer, block.get()));
     }
 
     private void sugaredConcretePowder(Consumer<FinishedRecipe> finishedRecipeConsumer, Block block) {

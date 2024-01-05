@@ -17,22 +17,7 @@ public class SCBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        this.dropSelf(SCBlocks.SUGARED_WHITE_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_ORANGE_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_MAGENTA_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_LIGHT_BLUE_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_YELLOW_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_LIME_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_PINK_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_GRAY_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_LIGHT_GRAY_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_CYAN_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_PURPLE_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_BLUE_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_BROWN_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_GREEN_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_RED_CONCRETE_POWDER.get());
-        this.dropSelf(SCBlocks.SUGARED_BLACK_CONCRETE_POWDER.get());
+        SCBlocks.BLOCKS.getEntries().forEach(block -> this.dropSelf(block.get()));
     }
 
     @Override

@@ -38,6 +38,6 @@ public class SCEvents {
     @SubscribeEvent
     public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS)
-            SCBlocks.BLOCKS.getEntries().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            SCBlocks.BLOCKS.getEntries().forEach(block -> event.accept(block.get()));
     }
 }
