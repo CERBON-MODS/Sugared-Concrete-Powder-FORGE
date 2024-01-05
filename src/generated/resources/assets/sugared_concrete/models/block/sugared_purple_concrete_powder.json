@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "sugared_concrete:block/sugared_purple_concrete_powder"
+  }
+}

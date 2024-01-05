@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "sugared_concrete_powder",
+  "key": {
+    "c": {
+      "item": "sugared_concrete:sugared_pink_concrete_powder"
+    },
+    "s": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "ccc",
+    "csc",
+    "ccc"
+  ],
+  "result": {
+    "count": 8,
+    "item": "sugared_concrete:sugared_pink_concrete_powder"
+  },
+  "show_notification": true
+}
