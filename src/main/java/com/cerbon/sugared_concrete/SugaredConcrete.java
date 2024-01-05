@@ -1,5 +1,7 @@
 package com.cerbon.sugared_concrete;
 
+import com.cerbon.sugared_concrete.block.SCBlocks;
+import com.cerbon.sugared_concrete.item.SCItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,6 +16,10 @@ public class SugaredConcrete {
 
     public SugaredConcrete() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        SCBlocks.register(modEventBus);
+        SCItems.register(modEventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
