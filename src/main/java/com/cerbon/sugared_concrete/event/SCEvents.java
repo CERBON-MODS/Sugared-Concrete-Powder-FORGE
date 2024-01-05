@@ -1,12 +1,15 @@
 package com.cerbon.sugared_concrete.event;
 
 import com.cerbon.sugared_concrete.SugaredConcrete;
+import com.cerbon.sugared_concrete.block.SCBlocks;
 import com.cerbon.sugared_concrete.datagen.providers.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -30,5 +33,11 @@ public class SCEvents {
 
         generator.addProvider(event.includeClient(), new SCBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new SCLanguageProvider(packOutput));
+    }
+
+    @SubscribeEvent
+    public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS)
+            SCBlocks.BLOCKS.getEntries().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
     }
 }
