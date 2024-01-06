@@ -38,7 +38,7 @@ public class SCBlocks {
 
     private static <T extends Block> RegistryObject<T> registerBlockWithItem(String name, Supplier<T> block) {
         RegistryObject<T> blockRegistry = BLOCKS.register(name, block);
-        SCItems.ITEMS.register(name, () -> new BlockItem(blockRegistry.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+        SCItems.ITEMS.register(name, () -> new BlockItem(blockRegistry.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
         return blockRegistry;
     }
 
