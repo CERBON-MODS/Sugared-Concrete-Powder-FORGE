@@ -1,6 +1,7 @@
 package com.cerbon.sugared_concrete.block.custom;
 
 import com.cerbon.sugared_concrete.config.SCClientConfigs;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -15,9 +16,15 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class SugaredConcretePowderBlock extends FallingBlock {
+    public static final MapCodec<SugaredConcretePowderBlock> CODEC = simpleCodec(SugaredConcretePowderBlock::new);
 
     public SugaredConcretePowderBlock(Properties properties) {
         super(properties);
+    }
+
+    @Override
+    protected @NotNull MapCodec<? extends FallingBlock> codec() {
+        return CODEC;
     }
 
     @Override
