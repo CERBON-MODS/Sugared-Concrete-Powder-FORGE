@@ -4,6 +4,7 @@ import com.cerbon.sugared_concrete.SugaredConcrete;
 import com.cerbon.sugared_concrete.block.custom.SugaredConcretePowderBlock;
 import com.cerbon.sugared_concrete.item.SCItems;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -37,7 +38,7 @@ public class SCBlocks {
 
     private static <T extends Block> RegistryObject<T> registerBlockWithItem(String name, Supplier<T> block) {
         RegistryObject<T> blockRegistry = BLOCKS.register(name, block);
-        SCItems.ITEMS.register(name, () -> new BlockItem(blockRegistry.get(), new Item.Properties()));
+        SCItems.ITEMS.register(name, () -> new BlockItem(blockRegistry.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
         return blockRegistry;
     }
 
