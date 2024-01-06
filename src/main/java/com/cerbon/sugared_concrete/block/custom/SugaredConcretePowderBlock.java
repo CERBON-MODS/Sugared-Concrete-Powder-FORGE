@@ -4,6 +4,7 @@ import com.cerbon.sugared_concrete.config.SCClientConfigs;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
@@ -23,7 +24,7 @@ public class SugaredConcretePowderBlock extends FallingBlock {
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
         if (SCClientConfigs.ENABLE_BLOCK_TOOLTIP.get())
-            tooltip.add(Component.translatable("block.sugared_concrete.sugared_concrete_powder_block.tooltip").withStyle(ChatFormatting.DARK_GRAY));
+            tooltip.add(new TranslatableComponent("block.sugared_concrete.sugared_concrete_powder_block.tooltip").withStyle(ChatFormatting.DARK_GRAY));
     }
 
     @Override
