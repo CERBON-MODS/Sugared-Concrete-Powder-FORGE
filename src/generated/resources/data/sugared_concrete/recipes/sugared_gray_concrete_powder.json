@@ -4,7 +4,7 @@
   "group": "sugared_concrete_powder",
   "key": {
     "c": {
-      "item": "sugared_concrete:sugared_gray_concrete_powder"
+      "item": "minecraft:gray_concrete_powder"
     },
     "s": {
       "item": "minecraft:sugar"
