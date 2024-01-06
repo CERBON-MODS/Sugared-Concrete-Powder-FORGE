@@ -1,6 +1,7 @@
 package com.cerbon.sugared_concrete.datagen.providers;
 
 import com.cerbon.sugared_concrete.SugaredConcrete;
+import com.cerbon.sugared_concrete.block.SCBlocks;
 import com.cerbon.sugared_concrete.util.SCTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -27,5 +28,7 @@ public class SCItemTagProvider extends ItemTagsProvider {
                 .map(Map.Entry::getValue)
                 .filter(ConcretePowderBlock.class::isInstance)
                 .forEach(block -> this.tag(SCTags.CONCRETE_POWDERS).add(block.asItem()));
+
+        SCBlocks.BLOCKS.getEntries().forEach(block -> this.tag(SCTags.SUGARED_CONCRETE_POWDERS).add(block.get().asItem()));
     }
 }

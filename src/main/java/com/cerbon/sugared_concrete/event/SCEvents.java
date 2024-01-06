@@ -8,11 +8,13 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeAdvancementProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @Mod.EventBusSubscriber(modid = SugaredConcrete.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -29,6 +31,7 @@ public class SCEvents {
 
         generator.addProvider(event.includeServer(), new SCItemTagProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter(), existingFileHelper));
         generator.addProvider(event.includeServer(), new SCRecipeProvider(packOutput));
+        generator.addProvider(event.includeServer(), new ForgeAdvancementProvider(packOutput, lookupProvider, existingFileHelper, List.of(new SCAdvancementProvider())));
         generator.addProvider(event.includeServer(), SCLootTableProvider.create(packOutput));
 
         generator.addProvider(event.includeClient(), new SCBlockStateProvider(packOutput, existingFileHelper));

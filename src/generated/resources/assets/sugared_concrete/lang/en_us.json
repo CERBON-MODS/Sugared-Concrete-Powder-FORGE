@@ -1,4 +1,6 @@
 {
+  "advancement.sugared_concrete.sugar_coated.description": "Create a sugared concrete powder block by combining sugar with concrete powder in a crafting table",
+  "advancement.sugared_concrete.sugar_coated.title": "Sugar Coated",
   "block.sugared_concrete.sugared_black_concrete_powder": "Black Sugared Concrete Powder",
   "block.sugared_concrete.sugared_blue_concrete_powder": "Blue Sugared Concrete Powder",
   "block.sugared_concrete.sugared_brown_concrete_powder": "Brown Sugared Concrete Powder",

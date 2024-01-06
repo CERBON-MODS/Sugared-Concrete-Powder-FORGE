@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "has_sugared_concrete_powder": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "sugared_concrete:sugared_concrete_powders"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.sugared_concrete.sugar_coated.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:sugar"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.sugared_concrete.sugar_coated.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_sugared_concrete_powder"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

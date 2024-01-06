@@ -31,5 +31,7 @@ public class SCLanguageProvider extends LanguageProvider {
         add(SCBlocks.SUGARED_BLACK_CONCRETE_POWDER.get(), "Black Sugared Concrete Powder");
 
         add("block.sugared_concrete.sugared_concrete_powder_block.tooltip", "Does not harden when touching water");
+        add("advancement.sugared_concrete.sugar_coated.title", "Sugar Coated");
+        add("advancement.sugared_concrete.sugar_coated.description", "Create a sugared concrete powder block by combining sugar with concrete powder in a crafting table");
     }
 }

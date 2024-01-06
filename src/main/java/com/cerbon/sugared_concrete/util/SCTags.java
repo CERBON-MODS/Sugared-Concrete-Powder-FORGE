@@ -8,4 +8,5 @@ import net.minecraft.world.item.Item;
 
 public class SCTags {
     public static final TagKey<Item> CONCRETE_POWDERS = ItemTags.create(new ResourceLocation(SugaredConcrete.MOD_ID, "concrete_powders"));
+    public static final TagKey<Item> SUGARED_CONCRETE_POWDERS = ItemTags.create(new ResourceLocation(SugaredConcrete.MOD_ID, "sugared_concrete_powders"));
 }
