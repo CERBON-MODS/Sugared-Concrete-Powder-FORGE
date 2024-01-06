@@ -29,5 +29,7 @@ public class SCLanguageProvider extends LanguageProvider {
         add(SCBlocks.SUGARED_GREEN_CONCRETE_POWDER.get(), "Green Sugared Concrete Powder");
         add(SCBlocks.SUGARED_RED_CONCRETE_POWDER.get(), "Red Sugared Concrete Powder");
         add(SCBlocks.SUGARED_BLACK_CONCRETE_POWDER.get(), "Black Sugared Concrete Powder");
+
+        add("block.sugared_concrete.sugared_concrete_powder_block.tooltip", "Does not harden when touching water");
     }
 }
